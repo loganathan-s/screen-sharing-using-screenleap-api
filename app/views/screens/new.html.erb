@@ -1,0 +1,16 @@
+<h2 id="screenShareStatus">Your screen share is loading...</h2>
+<script type="text/javascript">
+    var screenleap = {};
+    screenleap.appletLoaded = function() {
+        document.getElementById('screenShareStatus').textContent =
+            'You are sharing your screen.';
+    };
+    screenleap.screenShareEnded = function() {
+        document.getElementById('screenShareStatus').textContent =
+            'Your screen share has ended.';
+    };
+</script>
+
+
+<%= @appletHtml %>
+<%= link_to "see my screen", @view_url %>
